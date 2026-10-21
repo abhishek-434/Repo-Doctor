@@ -1,0 +1,67 @@
+# RepoDoctor Configuration File
+# Place this file in your repository root or specify with --config <path>
+
+[analysis]
+# Maximum allowed file size for tracked files (in Megabytes) before triggering a warning
+large_file_mb = 10.0
+
+# Number of commits to inspect in commit history checks
+commit_history_limit = 50
+
+# Stale activity threshold in days (warn if no commits in this many days)
+stale_days_threshold = 180
+
+# Whether to enable secret pattern scanning by default
+check_secrets = true
+
+# Maximum file size (in Kilobytes) to scan for secret patterns (skips larger files)
+max_scan_file_size_kb = 1024
+
+[exclusions]
+# Directory names to exclude from secret scanning and structure checks
+ignored_dirs = [
+    ".git",
+    ".venv",
+    "venv",
+    "env",
+    ".env",
+    "node_modules",
+    "__pycache__",
+    ".pytest_cache",
+    ".idea",
+    ".vscode",
+    "build",
+    "dist",
+    "htmlcov"
+]
+
+# File patterns (glob syntax) to ignore during checks
+ignored_patterns = [
+    "*.min.js",
+    "*.min.css",
+    "*.lock",
+    "package-lock.json",
+    "poetry.lock",
+    "*.map"
+]
+
+[scoring.deductions]
+# Point deductions subtracted from 100 for each detected issue
+uncommitted_changes = 5.0
+untracked_files = 3.0
+detached_head = 4.0
+missing_readme = 12.0
+missing_gitignore = 8.0
+missing_license = 0.0      # Informational by default (0 points)
+large_files = 10.0
+tracked_generated = 8.0
+empty_directories = 2.0
+stale_repository = 5.0
+secrets_detected = 20.0
+no_commits = 15.0
+
+[output]
+# Default output format: "text", "json", or "csv"
+default_format = "text"
+# Colorize terminal output (true/false)
+color = true

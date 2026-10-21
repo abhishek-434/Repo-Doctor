@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repodoctor"
+version = "1.0.0"
+description = "Git Repository Health Checker — Analyze Git repositories, detect maintenance issues, and evaluate health."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "RepoDoctor Team" }
+]
+keywords = ["git", "health-check", "devops", "cli", "code-quality", "repository-maintenance"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Version Control :: Git",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.optional-dependencies]
+rich = ["rich>=13.0.0"]
+
+[project.scripts]
+repodoctor = "repodoctor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
