@@ -18,7 +18,6 @@ class Severity(str, Enum):
     LOW = "LOW"
     INFO = "INFO"
 
-
 class FindingCategory(str, Enum):
     """Category classification for repository findings."""
     STATUS = "status"
