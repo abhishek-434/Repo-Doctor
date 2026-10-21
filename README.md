@@ -7,6 +7,10 @@
 
 **RepoDoctor** is a professional, developer-friendly command-line interface (CLI) application inspired by modern DevOps and cybersecurity diagnostic tools. It conducts comprehensive, read-only diagnostic audits on Git repositories, identifies hygiene and maintenance issues, detects potential exposed credentials, computes a transparent 0–100 health score, and provides actionable recommendations before publishing or releasing software.
 
+<p align="center">
+  <img src="assets/repodoctor_dashboard.jpg" alt="RepoDoctor Terminal Dashboard" width="100%">
+</p>
+
 ---
 
 ## Table of Contents
